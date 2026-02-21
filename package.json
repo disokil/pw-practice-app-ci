@@ -8,14 +8,15 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve"
+    "start": "ng serve",
+    "pageObjects-chrome": "npx playwright test usepageObjects.spec.ts --project=chromium"
   },
-   "overrides": {
-    "stylus": "github:stylus/stylus#0.54.5"
+  "overrides": {
+    "@babel/runtime": "7.22.15",
+    "@babel/plugin-transform-runtime": "7.22.15"
   },
   "dependencies": {
     "@angular/animations": "^14.2.12",
-    "@angular/cdk": "12.1.0",
     "@angular/common": "^14.2.12",
     "@angular/compiler": "^14.2.12",
     "@angular/core": "^14.2.12",
@@ -24,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^14.2.12",
     "@angular/router": "^14.2.12",
     "@asymmetrik/ngx-leaflet": "3.0.1",
+    "@babel/runtime": "7.22.15",
     "@nebular/auth": "10.0.0",
     "@nebular/eva-icons": "10.0.0",
     "@nebular/security": "10.0.0",
@@ -57,13 +59,17 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.10",
+    "@angular/cdk": "^14.2.7",
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.2.12",
     "@angular/language-service": "14.2.12",
+    "@babel/plugin-transform-runtime": "7.22.15",
     "@compodoc/compodoc": "^1.1.19",
     "@fortawesome/fontawesome-free": "^5.2.0",
+    "@playwright/test": "^1.57.0",
     "@types/leaflet": "1.2.3",
-    "@types/node": "^12.12.70",
+    "@types/node": "^16.11.7",
+    "@types/ws": "^8.5.4",
     "codelyzer": "^0.0.28",
     "conventional-changelog-cli": "^2.2.2",
     "npm-run-all": "4.0.2",
