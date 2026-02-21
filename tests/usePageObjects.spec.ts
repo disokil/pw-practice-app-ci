@@ -25,7 +25,7 @@ test('parametrized methods', async({page}) => {
     await onFormLayoutsPage.submitInlineFormWithNameEmailAndCheckbox('Donald', 'test@test.com', true)
 })
 
-test.only('testing with argos ci', async({page}) => {
+test('navigate to form page', async({page}) => {
     const navigateTo = new NavigationPage(page)
     await navigateTo.formLayoutsPage()
     await navigateTo.datepickerPage()
