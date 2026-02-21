@@ -24,3 +24,9 @@ test('parametrized methods', async({page}) => {
     await onFormLayoutsPage.submitUsingTheGridFormWithCredentialsAndSelectOption('test@test.com', 'Pswrd1', 'Option 1')
     await onFormLayoutsPage.submitInlineFormWithNameEmailAndCheckbox('Donald', 'test@test.com', true)
 })
+
+test.only('testing with argos ci', async({page}) => {
+    const navigateTo = new NavigationPage(page)
+    await navigateTo.formLayoutsPage()
+    await navigateTo.datepickerPage()
+})
